@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_DATABASE: mydb
+    ports:
+     - "3306:3306"
+    volumes:
+      - /usr/local/mysql/data:/var/lib/mysql
